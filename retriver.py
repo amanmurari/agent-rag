@@ -1,6 +1,8 @@
 from langchain.vectorstores import FAISS
 from langchain.embeddings import CohereEmbeddings
 import os
+from dotenv import load_dotenv
+load_dotenv()
 os.environ["COHERE_API_KEY"] = os.environ.get("COHERE_API_KEY")
 class VectorRetriever:
     def __init__(self, persist_dir="vectorstore"):
